@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <item
+        android:id="@+id/home_button"
+        android:enabled="true"
+        android:icon="@drawable/home_icon"
+        android:title="@string/homeButton"/>
+
+    <item
+        android:id="@+id/shop_button"
+        android:enabled="true"
+        android:icon="@drawable/shop_icon"
+        android:title="@string/shopButton" />
+
+    <item
+        android:id="@+id/library_button"
+        android:enabled="true"
+        android:icon="@drawable/library_icon"
+        android:title="@string/libraryButton"/>
+</menu>

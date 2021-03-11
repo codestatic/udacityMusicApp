@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // bottom navigation style
+
+    <style name="bottomNavigation">
+        <item name="android:background">@color/purple_500</item>
+    </style>
+
+    // activity title header styles
+    <style name="mainHeader">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:fontFamily">sans-serif-condensed-medium</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+</resources>
