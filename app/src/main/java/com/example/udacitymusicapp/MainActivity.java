@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+// Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.home_button);
@@ -37,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.home_button:
+                        return true;
+                    case R.id.now_playing_button:
+                        startActivity(new Intent(getApplicationContext()
+                                , NowPlayingActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
                 }
                 return false;

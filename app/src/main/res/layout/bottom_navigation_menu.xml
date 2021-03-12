@@ -21,4 +21,11 @@
         android:enabled="true"
         android:icon="@drawable/library_icon"
         android:title="@string/libraryButton"/>
+
+    <item
+        android:id="@+id/now_playing_button"
+        android:enabled="true"
+        android:icon="@drawable/playing_icon"
+        android:title="@string/playingButton"/>
+
 </menu>

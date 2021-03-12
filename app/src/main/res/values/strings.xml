@@ -5,6 +5,7 @@
     <string name="homeButton">Home</string>
     <string name="shopButton">Shop</string>
     <string name="libraryButton">Library</string>
+    <string name="playingButton">Now Playing</string>
 
     // header titles
     <string name="libraryHeader">Library</string>
