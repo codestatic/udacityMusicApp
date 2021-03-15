@@ -52,12 +52,13 @@ public class LibraryActivity extends AppCompatActivity {
         // Set a click listener on that View
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
-                startActivity(new Intent(getApplicationContext()
-                        , NowPlayingActivity.class));
+                Intent nowPlaying = new Intent(LibraryActivity.this, NowPlayingActivity.class);
+                nowPlaying.putExtra("songTitle", nowPlaying);
+                startActivity(nowPlaying);
+
             }
         });
 
