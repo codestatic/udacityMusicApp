@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
@@ -35,23 +36,11 @@ public class ShopActivity extends AppCompatActivity {
         genres[4] = "Hip Hop";
         genres[5] = "Chill";
 
-// Finding view list
-        LinearLayoutCompat shopView = (LinearLayoutCompat) findViewById(R.id.shop_list);
+        ArrayAdapter<String> songAdapter = new ArrayAdapter<String>(this, R.layout.shop_items, genres);
 
-        for (int index = 0; index <6; index++) {
-            TextView genreView = new TextView(this);
-            genreView.setText(genres[index]);
-            shopView.addView(genreView);
-        }
+        ListView listView = (ListView) findViewById(R.id.shop_list);
+        listView.setAdapter(songAdapter);
 
-        /**
-// Array adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, genres );
-
-// display array list
-    listView.setAdapter(adapter);
-*/
 // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 

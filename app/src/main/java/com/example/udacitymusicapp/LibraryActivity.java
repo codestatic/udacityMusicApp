@@ -3,10 +3,14 @@ package com.example.udacitymusicapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,6 +46,20 @@ public class LibraryActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.library_list);
 
         listView.setAdapter(adapter);
+
+ // On click listener for text views
+
+        // Set a click listener on that View
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+                                    long arg3) {
+                startActivity(new Intent(getApplicationContext()
+                        , NowPlayingActivity.class));
+            }
+        });
 
 // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

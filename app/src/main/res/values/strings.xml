@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">udacityMusicApp</string>
+    <string name="app_name">Music App</string>
 
 // bottom navigation bar
     <string name="homeButton">Home</string>

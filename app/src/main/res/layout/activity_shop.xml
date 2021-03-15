@@ -15,7 +15,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <ListView
         android:id="@+id/shop_list"
         android:orientation="vertical"
         android:layout_width="match_parent"
