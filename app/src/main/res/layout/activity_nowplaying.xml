@@ -14,11 +14,33 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/song_now_playing_title"
+        android:src="@drawable/now_playing_music"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
     <TextView
-        android:id="@+id/song_now_playing_view"
+        android:id="@+id/song_now_playing_title"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
+        android:textSize="22dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/song_now_playing_name" />
+
+    <TextView
+        android:id="@+id/song_now_playing_name"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textColor="@color/white"
         android:background="@color/purple_500"
         app:layout_constraintBottom_toTopOf="@+id/music_button_view" />
 

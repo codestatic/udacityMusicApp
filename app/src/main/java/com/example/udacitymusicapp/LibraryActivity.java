@@ -53,16 +53,18 @@ public class LibraryActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
-                                    long arg3) {
-                Intent nowPlaying = new Intent(LibraryActivity.this, NowPlayingActivity.class);
-                nowPlaying.putExtra("songTitle", nowPlaying);
-                startActivity(nowPlaying);
-
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                LibrarySongs currentSong = (LibrarySongs) parent.getItemAtPosition(position);
+                String Artist = currentSong.getArtistName();
+                String Title = currentSong.getSongTitle();
+                Intent intent = new Intent(LibraryActivity.this, NowPlayingActivity.class);
+                intent.putExtra("Artist", Artist);
+                intent.putExtra("Title",Title);
+                startActivity(intent);
             }
-        });
+});
 
-// Bottom navigation bar
+            // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.library_button);

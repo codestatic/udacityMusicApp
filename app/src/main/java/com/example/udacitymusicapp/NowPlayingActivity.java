@@ -21,8 +21,13 @@ public class NowPlayingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_nowplaying);
 
 // get data from array to display song title and artist now playing
-        Intent nowPlaying = getIntent();
-        nowPlaying.getStringArrayExtra("songTitle");
+        Intent i = getIntent();
+        TextView nowPlayingSongText = (TextView) findViewById(R.id.song_now_playing_title);
+        String nowPlayingSong = i.getStringExtra("Title");
+        nowPlayingSongText.setText(nowPlayingSong);
+        TextView nowPlayingArtistText = (TextView) findViewById(R.id.song_now_playing_name);
+        String nowPlayingArtist = i.getStringExtra("Artist");
+        nowPlayingArtistText.setText(nowPlayingArtist);
 
 // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
