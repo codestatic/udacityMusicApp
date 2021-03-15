@@ -24,8 +24,6 @@ public class NowPlayingActivity extends AppCompatActivity {
         Intent nowPlaying = getIntent();
         nowPlaying.getStringArrayExtra("songTitle");
 
-        TextView songTitleView = findViewById(R.id.song_now_playing_view);
-
 // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
