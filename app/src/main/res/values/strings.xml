@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Music App</string>
 
-// bottom navigation bar
+    // bottom navigation bar
     <string name="homeButton">Home</string>
     <string name="shopButton">Shop</string>
     <string name="libraryButton">Library</string>
@@ -12,4 +12,6 @@
     <string name="shopHeader">Shop</string>
     <string name="nowPlayingHeader">Now Playing</string>
     <string name="homeHeader">Home</string>
+    <string name="recently_played">Recently Played</string>
+    <string name="quick_purchase">Quick Purchase</string>
 </resources>

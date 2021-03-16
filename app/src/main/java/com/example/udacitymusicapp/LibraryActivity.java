@@ -47,8 +47,6 @@ public class LibraryActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
- // On click listener for text views
-
         // Set a click listener on that View
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -59,12 +57,12 @@ public class LibraryActivity extends AppCompatActivity {
                 String Title = currentSong.getSongTitle();
                 Intent intent = new Intent(LibraryActivity.this, NowPlayingActivity.class);
                 intent.putExtra("Artist", Artist);
-                intent.putExtra("Title",Title);
+                intent.putExtra("Title", Title);
                 startActivity(intent);
             }
-});
+        });
 
-            // Bottom navigation bar
+        // Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.library_button);

@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_500"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/main_header"
         style="@style/mainHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/nowPlayingHeader"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -17,20 +21,21 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/song_now_playing_title"
         android:src="@drawable/now_playing_music"
+        app:layout_constraintBottom_toTopOf="@+id/song_now_playing_title"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/main_header" />
 
     <TextView
         android:id="@+id/song_now_playing_title"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
-        android:textSize="22dp"
+        android:background="@color/purple_500"
         android:gravity="center"
         android:textColor="@color/white"
-        android:background="@color/purple_500"
+        android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/song_now_playing_name" />
 
     <TextView
@@ -38,47 +43,43 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/purple_500"
         android:gravity="center"
-        android:textSize="22dp"
         android:textColor="@color/white"
-        android:background="@color/purple_500"
-        app:layout_constraintBottom_toTopOf="@+id/music_button_view" />
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/play_music_button" />
 
-    <FrameLayout
-        android:id="@+id/music_button_view"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
+    <ImageView
+        android:id="@+id/back_music_button"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginBottom="16dp"
-        android:background="@color/purple_500"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation">
+        android:src="@drawable/music_back"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/play_music_button" />
 
-        <ImageView
-            android:id="@+id/back_music_button"
-            style="@style/musicButton"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="85dp"
-            android:src="@drawable/music_back" />
+    <ImageView
+        android:id="@+id/play_music_button"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/music_play"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintLeft_toRightOf="@id/back_music_button"
+        app:layout_constraintRight_toLeftOf="@id/next_music_button" />
 
-        <ImageView
-            android:id="@+id/play_music_button"
-            style="@style/musicButton"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:src="@drawable/music_play" />
-
-        <ImageView
-            android:id="@+id/next_music_button"
-            style="@style/musicButton"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="300dp"
-            android:src="@drawable/music_next" />
-
-    </FrameLayout>
+    <ImageView
+        android:id="@+id/next_music_button"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/music_next"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintLeft_toRightOf="@id/play_music_button"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

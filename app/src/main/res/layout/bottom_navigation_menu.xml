@@ -8,7 +8,7 @@
         android:id="@+id/home_button"
         android:enabled="true"
         android:icon="@drawable/home_icon"
-        android:title="@string/homeButton"/>
+        android:title="@string/homeButton" />
 
     <item
         android:id="@+id/shop_button"
@@ -20,12 +20,12 @@
         android:id="@+id/library_button"
         android:enabled="true"
         android:icon="@drawable/library_icon"
-        android:title="@string/libraryButton"/>
+        android:title="@string/libraryButton" />
 
     <item
         android:id="@+id/now_playing_button"
         android:enabled="true"
         android:icon="@drawable/playing_icon"
-        android:title="@string/playingButton"/>
+        android:title="@string/playingButton" />
 
 </menu>
